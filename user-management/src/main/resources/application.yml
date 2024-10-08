@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: user-management
+  datasource:
+    url: jdbc:mysql://localhost:3306/usermanagement
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      format_sql: true
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: rohit.hajipur2001@gmail.com
+    password: kcvfxvewpozfkgjh
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+jwt:
+  secret: "5D+OIp6AcYSVtjNE+aFkwqq1taisdFD4jqwKsBI/LUk="
+
+app:
+  tokens:
+    validToken: "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWxleDEiLCJzdWIiOiJhbGV4MSIsImlhdCI6MTcyMDA4MTUxMywiZXhwIjoxNzIyNjczNTEzfQ.hR-Apv7_VQQ4nG2bgMVogVoNV96HonPR8lH_ZmKFJKs"
+    invalidToken: "eyJhbGciOiJIUzI1NiJ9.eyJVU0VSTkFNRSI6ImpvaG4xIiwiVVNFUl9JRCI6NSwic3ViIjoiam9objEiLCJpYXQiOjE3MjAwNzU3V4cCI6MTcyMDA3NTc2Mn0.isXIuGiC4PJNzO0OQHApy1K42lMrJDd3AfLyMKqmvxM"
+    expiredToken: "eyJhbGciOiJIUzI1NiJ9.eyJVU0VSTkFNRSI6ImpvaG4xIiwiVVNFUl9JRCI6NSwic3ViIjoiam9objEiLCJpYXQiOjE3MjAwNzU3NTIsImV4cCI6MTcyMDA3NTc2Mn0.isXIuGiC4PJNzO0OQHApy1K42lMrJDd3AfLyMKqmvxM"
