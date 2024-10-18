@@ -5,22 +5,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the application...'
-                // Replace with your build commands
-                sh 'echo "Compile and build commands go here"'
+                bat 'echo "Compile and build commands go here"'
             }
         }
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                // Replace with your test commands
-                sh 'echo "Test commands go here"'
+                bat 'echo "Test commands go here"'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                // Replace with your deployment commands
-                sh 'echo "Deployment commands go here"'
+                bat 'echo "Deployment commands go here"'
             }
         }
     }
