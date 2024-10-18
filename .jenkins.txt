@@ -1,0 +1,36 @@
+pipeline {
+    agent any 
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+                // Replace with your build commands
+                sh 'echo "Compile and build commands go here"'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Replace with your test commands
+                sh 'echo "Test commands go here"'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+                // Replace with your deployment commands
+                sh 'echo "Deployment commands go here"'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
+}
